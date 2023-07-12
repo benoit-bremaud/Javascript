@@ -3,4 +3,8 @@
 // alert("Message");
 
 // Poser une question
-prompt("Quel nombre ?");
+// prompt("Quel nombre ?");
+
+confirm("Etes vous sûr(e) ?");
+
+
