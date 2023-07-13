@@ -1,63 +1,49 @@
-// Les boucles
+// Les fonctions
 
-// Boucle FOR
-for (let compteur = 0; compteur <= 10; compteur++) {
-    console.log(compteur);    
+// Fonction qui va dire "bonjour"
+
+// Déclaration et initialisation de la fonction direBonjour
+function direBonjour() {
+    console.log("Bonjour");
 }
 
-for (let compteur = 0; compteur <= 10; compteur += 5) {
-    console.log(compteur);    
+// Appel de la fonction direBonjour
+direBonjour();
+
+console.log("Benoit");
+
+direBonjour();
+
+// Déclaration et initialisation d'une fonction avec paramètres, valeurs par défaut et son JSDoc
+/**
+ * Cette fonction fait un console.log qui dit "Bonjour"
+ * @param {string} prenom Prénom de la personne
+ * @param {string} nom Nom de la personne
+ */
+function direBonjoura(prenom = "Benoit", nom = "Bremaud") {
+    console.log(`Bonjour ${prenom} ${nom}`);
 }
 
-for (let compteur = 20; compteur >= 0; compteur--) {
-    console.log(compteur);    
+direBonjoura("Benoit", "Bremaud");
+direBonjoura("Viktor");
+direBonjoura("Roger", "Rabbit");
+
+direBonjoura("Benoit", "Bremaud");
+
+direBonjoura();
+
+// Fonction qui retourne une valeur
+/**
+ * Cette fonction additionne 2 nombres
+ * @param {number} nb1 Nombre 1
+ * @param {number} nb2 Nombre 2
+ * @returns number
+ */
+function addition(nb1, nb2) {
+    let total = nb1 + nb2;
+    return total;
 }
 
-for (let compteur = 100; compteur >= 0; compteur -= 10) {
-    console.log(compteur);    
-}
+let resultat = addition(5, 12);
 
-let pass = "azerty";
-
-// Boucle WHILE
-
-// while (pass != "brouette") {
-//     pass = prompt("Entrez le mot de passe");
-// }
-
-let clients =["Robert", "Bruno", "Pascale", "Benoit"];
-console.table(clients);
-
-// Parcours le tableau avec une boucle FOR
-for (let ligne = 0; ligne < clients.length; ligne++) {
-    console.log(clients[ligne]);
-}
-
-// Parcours avec boucle FOR IN quand on a besoin de la ligne
-for (let ligne in clients) {
-    console.log(ligne);
-}
-
-for (let ligne in clients) {
-    console.log(clients[ligne]);
-}
-
-// Parcours le tableau avec boucle FOR OF quand on a besoin de la valeur
-for (let valeur of clients) {
-    console.log(valeur);
-}
-
-// Parcours le tableau avec une boucle FOREACH quand on a besoin de la ligne ET de la valeur
-// On retour la valeur
-clients.forEach((valeur) => {
-    console.log(valeur); // Retourne Valeur
-});
-
-// On retour la valeur ET l'index
-clients.forEach((valeur, index) => {
-    console.log(valeur, index); // Retourne Valeur puis Index
-});
-
-clients.forEach((valeur, index, tableau) => {
-    console.log(tableau); // Retourne array
-});
+console.log(resultat);
