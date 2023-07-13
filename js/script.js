@@ -1,66 +1,160 @@
-// Gestion des tableaux
+// Conditions et opérations de comparaison
 
-// Initialisation d'un tableau
-let tableau = [];
+/* 
+Si le temps est beau
+    Je prends mes lunettes de soleil
+Sinon
+    Je prends mon parapluie
+*/
 
-console.log(tableau);
+let nombre = 12;
 
-// Affectation d'une valeur
-tableau = [10];
+// On pose une question
+if (nombre == 12) {
+    // La consition est remplie
+    console.log("Le nombre est égal à 12");
+}
+// Autre exemple
+nombre = 122;
 
-console.log(tableau);
+// On pose une question
+if (nombre == 12) {
+    // La condition est remplie
+    console.log("Le nombre est égal à 12");
+} else {
+    // La consition n'est pas rempli
+    console.log("Le nombre n'est pas égal à 12");
+}
 
-// Affectation de plusieurs valeurs de type différent
-tableau = [10, "Benoit"];
+// Autre exemple
+nombre = "12";
 
-console.log(tableau);
+// On pose une question
+if (nombre == 12) {
+    // La condition est remplie
+    console.log("Le nombre est égal à 12");
+} else {
+    // La consition n'est pas rempli
+    console.log("Le nombre n'est pas égal à 12");
+}
 
-// Affichage différent
-console.table(tableau); // Affichage sous forme de tableau dans la console
+// `==` ne compare que la valeur (égalité faible) `===` compare la valeur ET le type (égalité forte)
 
-// Affichage d'un élément à un indice donné
-console.log(tableau[1]);
+nombre = "12";
 
-// Inverser l'ordre du tableau
-tableau = [10, "Benoit", true, 18.25];
+// On pose une question
+if (nombre === 12) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le nombre est égal à 12");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le nombre n'est pas égal à 12");
+}
 
-tableau.reverse();
+nombre = 12;
 
-console.table(tableau);
-console.log(tableau[1]);
+// != inégalité
+if (nombre != 12) {
+    // La condition est remplie (en valeur seulement)
+    console.log("Le nombre n'est pas égal à 12");
+} else {
+    // La consition n'est pas rempli (en valeur seulement)
+    console.log("Le nombre est égal à 12");
+}
 
-// Ajouter un/des valeurs dans mon tableau
-// Au début
-tableau.unshift("Bonjour", "Benoit");
+nombre = "12";
 
-console.table(tableau);
-console.log(tableau[1]);
+// != inégalité faible
+if (nombre != 12) {
+    // La condition est remplie (en valeur seulement)
+    console.log("Le nombre n'est pas égal à 12");
+} else {
+    // La consition n'est pas rempli (en valeur seulement)
+    console.log("Le nombre est égal à 12");
+}
 
-// A la fin
-tableau.push("Au revoir");
+nombre = "12";
 
-console.table(tableau);
-console.log(tableau[1]);
+// !== inégalité stricte
+if (nombre !== 12) {
+    // La condition est remplie (en valeur et en type)
+    console.log("Le nombre n'est pas égal à 12");
+} else {
+    // La consition n'est pas rempli (valeur OK, type NOK)
+    console.log("Le nombre est égal à 12");
+}
 
-// Retirer une valeur du tableau
-// La 1ére
-let valeur = tableau.shift(); // Retire la première valeur du tableau
+nombre = 12;
 
-console.table(tableau);
-console.log(valeur);
+// < plus petit que
+if (nombre < 12) {
+    // La condition est remplie
+    console.log("Le nombre est plus petit que 12");
+} else {
+    // La consition n'est pas rempli
+    console.log("Le nombre n'est pas plus petit que 12");
+}
 
-// La dernière valeur du tableau
-valeur1 = tableau.pop();
+nombre = 11;
 
-console.table(tableau);
-console.log(valeur1);
+// <= plus petit ou égal à
+if (nombre <= 12) {
+    // La condition est remplie
+    console.log("Le nombre est plus petit ou égal à 12");
+} else {
+    // La consition n'est pas rempli
+    console.log("Le nombre n'est pas plus petit ou égal à 12");
+}
 
-// Modifier des valeurs dans le tableau
-tableau.splice(2, 0, "Valeur insérée"); // On insère un texte à la 2e place (entre 1 et 3)
+// <, <=, >, >=
 
-console.table(tableau);
-// console.log(valeur);
+// condition avec des booléens
+let bool = true;
 
-tableau.splice(2, 1, "Valeur2 insérée"); // On insère un texte à la 2e place (entre 1 et 3)
+if (bool === true) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le booléen est à true");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le booléen est à false");
+}
 
-console.table(tableau);
+// On peut aussi écrire de la façon suivante
+if (bool) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le booléen est à true");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le booléen est à false");
+}
+
+// On peut mixer
+if (bool && nombre < 12) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le booléen est à true et le nombre est plus petit que 12");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le booléen est à false");
+}
+
+// Autre exemple
+nombre = 13;
+bool = false;
+
+if (bool || nombre < 12) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le booléen est à true OU le nombre est plus petit que 12");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le booléen est à false et le nombre n'est pas plus petit que 12");
+}
+
+// Autre exemple
+if (bool || nombre < 12 && nombre > 5) {
+    // La condition est remplie (valeur ET type)
+    console.log("Le booléen est à true OU le nombre est plus petit que 12");
+} else {
+    // La consition n'est pas rempli (ici valeur OK, type NOK)
+    console.log("Le booléen est à false et le nombre n'est pas plus petit que 12");
+}
+
