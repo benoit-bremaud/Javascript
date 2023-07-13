@@ -1,49 +1,66 @@
-// Manipuler les chaînes de caractères
-let texte = "J'ai une jolie brouette";
-console.log(texte);
+// Gestion des tableaux
 
-let texte2 = 'Un texte';
-console.log(texte2);
+// Initialisation d'un tableau
+let tableau = [];
 
-let texte3 = `Un autre texte`;
-console.log(texte3);
+console.log(tableau);
 
-let texte4 = 'J\'ai moi aussi une jolie brouette';
-console.log(texte4);
+// Affectation d'une valeur
+tableau = [10];
 
-let texte5 = 'J\'ai moi aussi une jolie \'brouette\'';
-console.log(texte5);
+console.log(tableau);
 
-let prenom = "Benoit";
+// Affectation de plusieurs valeurs de type différent
+tableau = [10, "Benoit"];
 
-let nom = "Bremaud";
+console.log(tableau);
 
-let phrase = "Bon" + "jour";
-console.log(phrase);
+// Affichage différent
+console.table(tableau); // Affichage sous forme de tableau dans la console
 
-let phrase2 = "Bonjour " + prenom + " " + nom;
-console.log(phrase2);
+// Affichage d'un élément à un indice donné
+console.log(tableau[1]);
 
-let phrase3 = `Bonjour ${prenom} ${nom}`; // Avec injection de valeur
-console.log(phrase3);
+// Inverser l'ordre du tableau
+tableau = [10, "Benoit", true, 18.25];
 
-console.log(phrase3[3]); // Affiche le caractère à l'indice n° 3
+tableau.reverse();
 
-console.log(phrase3.length); // Affiche le nombre de caractère (longueur) de la chaîne "phrase3"
+console.table(tableau);
+console.log(tableau[1]);
 
-// La chaîne contient-elle le mot "Benoit" ?
-console.log(phrase3.indexOf("Benoit")); // Benoit se trouve en position 8 (la lettre B)
+// Ajouter un/des valeurs dans mon tableau
+// Au début
+tableau.unshift("Bonjour", "Benoit");
 
-console.log(phrase3.indexOf("benoit")); // Renvoi -1 donc "je n'ai pas trouvé"
+console.table(tableau);
+console.log(tableau[1]);
 
-console.log(phrase3.indexOf("t")); // Renvoi 13 donc la lettre "t" se trouve à la 13e position
+// A la fin
+tableau.push("Au revoir");
 
-console.log(phrase3.slice(8)); // Renvoi tout se qui se trouve après le 8e caractère
+console.table(tableau);
+console.log(tableau[1]);
 
-console.log(phrase3.slice(8, 12)); // Renvoi tout se qui se trouve entre le 8e et le 12e caractère
+// Retirer une valeur du tableau
+// La 1ére
+let valeur = tableau.shift(); // Retire la première valeur du tableau
 
-console.log(phrase3.toUpperCase()); // Renvoi la phrase3 en Majuscule
+console.table(tableau);
+console.log(valeur);
 
-console.log(phrase3.toLowerCase()); // Renvoi la phrase3 en minuscule
+// La dernière valeur du tableau
+valeur1 = tableau.pop();
 
-console.log(phrase3.replace("Benoit", "Bruno")); // Modifie une partie de la chaîne de caractère
+console.table(tableau);
+console.log(valeur1);
+
+// Modifier des valeurs dans le tableau
+tableau.splice(2, 0, "Valeur insérée"); // On insère un texte à la 2e place (entre 1 et 3)
+
+console.table(tableau);
+// console.log(valeur);
+
+tableau.splice(2, 1, "Valeur2 insérée"); // On insère un texte à la 2e place (entre 1 et 3)
+
+console.table(tableau);
