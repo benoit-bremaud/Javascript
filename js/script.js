@@ -1,45 +1,49 @@
-let nombre1 = 12;
-let nombre2 = 25;
+// Manipuler les chaînes de caractères
+let texte = "J'ai une jolie brouette";
+console.log(texte);
 
-// Opérations de base +, -, *, /
-let nombre = nombre1 + nombre2;
+let texte2 = 'Un texte';
+console.log(texte2);
 
-nombre = nombre1 - nombre2;
+let texte3 = `Un autre texte`;
+console.log(texte3);
 
-nombre = nombre1 * nombre2;
+let texte4 = 'J\'ai moi aussi une jolie brouette';
+console.log(texte4);
 
-nombre = nombre1 / nombre2;
+let texte5 = 'J\'ai moi aussi une jolie \'brouette\'';
+console.log(texte5);
 
-// Priorité des opérations
-nombre = 2+3*5;
+let prenom = "Benoit";
 
-nombre = (2+3)*5;
+let nom = "Bremaud";
 
-// Modulo % renvoi le reste de la division
-nombre = nombre1 % nombre2;
+let phrase = "Bon" + "jour";
+console.log(phrase);
 
-nombre = 15 % 4;
+let phrase2 = "Bonjour " + prenom + " " + nom;
+console.log(phrase2);
 
-// Incrément - décrément
-// Incrément de 4
-nombre = nombre + 4;
-nombre += 4;
-nombre += 1;
+let phrase3 = `Bonjour ${prenom} ${nom}`; // Avec injection de valeur
+console.log(phrase3);
 
-// Incrément de 1
-nombre++;
+console.log(phrase3[3]); // Affiche le caractère à l'indice n° 3
 
-// Décrément de 3
-nombre = nombre - 3;
-nombre -= 3;
+console.log(phrase3.length); // Affiche le nombre de caractère (longueur) de la chaîne "phrase3"
 
-// Décrément de 1
-nombre--;
+// La chaîne contient-elle le mot "Benoit" ?
+console.log(phrase3.indexOf("Benoit")); // Benoit se trouve en position 8 (la lettre B)
 
-nombre *= 4;
-nombre /= 4;
+console.log(phrase3.indexOf("benoit")); // Renvoi -1 donc "je n'ai pas trouvé"
 
+console.log(phrase3.indexOf("t")); // Renvoi 13 donc la lettre "t" se trouve à la 13e position
 
-// Ecrire dans la console
-console.log(nombre);        // Affiche le contenu de la variable nombre dans la console
+console.log(phrase3.slice(8)); // Renvoi tout se qui se trouve après le 8e caractère
 
+console.log(phrase3.slice(8, 12)); // Renvoi tout se qui se trouve entre le 8e et le 12e caractère
+
+console.log(phrase3.toUpperCase()); // Renvoi la phrase3 en Majuscule
+
+console.log(phrase3.toLowerCase()); // Renvoi la phrase3 en minuscule
+
+console.log(phrase3.replace("Benoit", "Bruno")); // Modifie une partie de la chaîne de caractère
