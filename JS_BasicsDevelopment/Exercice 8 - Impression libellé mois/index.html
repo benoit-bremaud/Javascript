@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2-2 - Paragraphe 2.2</title>
+</head>
+<body>
+    <h1>Editions ENI - JavaScript - Exercice n°8</h1>
+    <h2>Impression du libellé d'un mois</h2>
+    <script>
+        /* Affichage du nom du script */
+        alert("Exercice n°8 - Impression Libellé Mois");
+
+        /* Déclaration des variables locales */
+        let mois;
+
+        /* Saisie du numéro du mois */
+        mois = parseInt(prompt("Numéro du mois (1 à 12) :"));
+
+        /* Affichage du résultat */
+        switch (mois){
+            case 1:
+                document.write("Mois n° " + mois + " : Janvier");
+                break;
+            case 2:
+                document.write("Mois n° " + mois + " : Février");
+                break;
+            case 3:
+                document.write("Mois n° " + mois + " : Mars");
+                break;
+            case 4:
+                document.write("Mois n° " + mois + " : Avril");
+                break;
+            case 5:
+                document.write("Mois n° " + mois + " : Mai");
+                break;
+            case 6:
+                document.write("Mois n° " + mois + " : Juin");
+                break;
+            case 7:
+                document.write("Mois n° " + mois + " : Juillet");
+                break;
+            case 8:
+                document.write("Mois n° " + mois + " : Août");
+                break;
+            case 9:
+                document.write("Mois n° " + mois + " : Septembre");
+                break;
+            case 10:
+                document.write("Mois n° " + mois + " : Octobre");
+                break;
+            case 11:
+                document.write("Mois n° " + mois + " : Novembre");
+                break;
+            case 12:
+                document.write("Mois n° " + mois + " : Décembre");
+                break;
+            default:
+                document.write("Erreur de saisie sur le numéro du mois !");
+
+        }
+    </script>    
+</body>
+</html>
