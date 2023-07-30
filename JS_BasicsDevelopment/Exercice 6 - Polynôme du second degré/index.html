@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2-2 - Paragraphe 2.1</title>
+</head>
+<body>
+    <h1>Editions ENI - JavaScript - Exercice n°6</h1>
+    <h2>Polynôme du second degré</h2>
+    <script>
+        /* Affichage du nom du script */
+        alert("Exercice n°6 - Polynôme de second degré");
+
+        /* Déclaration des variables locales */
+        let A, B, C, Delta;
+
+        /* Saisie des valeurs */
+        A = prompt("A :");
+        B = prompt("B :");
+        C = prompt("C :");
+
+        /* Calcul du discriminant */
+        Delta = (parseInt(B) * parseInt(B)) - (4 * parseInt(A) * parseInt(C));
+
+        /* Affichage des paramètres */
+        document.write("A : " + A + "<br/>");
+        document.write("B : " + B + "<br/>");
+        document.write("C : " + C + "<br/>");
+        document.write("Discriminant Delta : " + Delta + "<br/>");
+        
+        /* Détermination des racines */
+        if (Delta < 0) {
+            document.write("Pas de solutions");
+        } else {
+            if (Delta == 0) {
+                document.write("Solution unique : " + (-B / (2 * A)));
+            } else {
+                document.write("Solution n°1 : " + (-B + Math.sqrt(Delta) / (2 * A) + "<br/>"));
+                document.write("Solution n°1 : " + (-B - Math.sqrt(Delta) / (2 * A) + "<br/>"));
+            }
+        }
+    </script>
+    
+</body>
+</html>
