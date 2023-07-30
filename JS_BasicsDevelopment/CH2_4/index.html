@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 - Paragraphe 4</title>
+</head>
+<body>
+    <h1>Eidtions ENI - JavaScript - Exercice CH2_4</h1>    
+    <script>
+        /* Affichage du nom du script */
+        alert("Exercice CH2_4 - Détermination des initiales");
+
+        /* Déclaration des variables locales */
+        let nom, prenom, initiale_prenom, initiale_nom;
+
+        /* Saisie du prénom */
+        prenom = prompt("Prénom :");
+        
+        /* Saisie du nom */
+        nom = prompt("Nom :");
+
+        /* Détermination des initiales */
+        /* NB : La numération des lettres dans une chaine de caractère débute à 0 */
+        initiale_prenom = prenom.charAt(0);
+        initiale_nom = nom.substring(0, 1);
+
+        /* Affichage des initiales */
+        document.write("Les initiales de " + prenom + " " + nom + " sont " + initiale_prenom + initiale_nom);
+
+    </script>
+</body>
+</html>
