@@ -1,58 +1,24 @@
-// Manipuler le document (DOM) Document Object Model - Partie 2
-// On place un écouteur d'événement
+// Manipuler le document (DOM) Document Object Model - Partie 3
+
+// On utilise à la place de l'attribut "defer" l'évenement "DOMContentLoaded"
 window.addEventListener("DOMContentLoaded", () => {
     // Ici on est certains que le DOM est chargé
-    
-    // Aller chercher un/des élément(s) dans le document
-    // Aller chercher tous ce qui a la balise h2
-    let balisesH2 = document.querySelectorAll("h2");
-    // console.log(baliseH2);
-    
-    
-    // Acceder au 2e li grace au selecteur CSS
-    let baliseLi = document.querySelector("li:nth-child(2)");
+    let baliseP = document.querySelector("#titre2 + p"); // On va chercher la balise "p" qui suit le titre2
+
+    // Affiche dans la console
+    // console.log(baliseP.previousElementSibling);
+
+    // On change le texte de l'élément parent, à savoir ici le tire h2
+    baliseP.previousElementSibling.innerText = "Texte modifié";
+
+    // Possibilité de manipuler les parents
+    // On va chercher la balise li, la dernière balise li
+    let baliseLi = document.querySelector("li:last-child");
     console.log(baliseLi);
-    
-    // Aller chercher un élément avec une classe
-    let classeRow = document.querySelectorAll(".row"); // Attention, si on utilise SelectorAll, il faut par la suite boucler
-    console.log(classeRow);
-    
-    // Aller chercher un élément avec un id
-    // let titre2 = document.querySelector("#titre2");
-    // console.log(classeRow);
-    
-    for (let row of classeRow) {
-        row.style.color ="red";
-    }
 
-    // On écoute le clic sur les balises h2
-    // console.log(baliseH2);
-    for (let baliseH2 of balisesH2) {        
-        baliseH2.addEventListener("click", changeCouleur);
-        baliseH2.addEventListener("mouseenter", ajoutBordrues);
-        baliseH2.addEventListener("mouseleave", retraitBordures);
-            // console.log(this);
-            // this.style.color = "green";
-    }
+    // let section1 = baliseP.parentElement.previousElementSibling;
+    // console.log(section1);
 
-    baliseLi.addEventListener("click", changeCouleur);
-    baliseLi.addEventListener("mouseenter", ajoutBordrues);
-    baliseLi.addEventListener("mouseleave", retraitBordures);
-
+    // let baliseLi = section1.querySelector("li:last-child");
+    // console.log(baliseLi);
 });
-
-function changeCouleur() {
-    this.style.color = "green";
-}
-
-function ajoutBordrues() {
-    this.style.border = "1px solid black";
-    this.removeEventListener("mouseenter", ajoutBordrues);
-}
-
-function retraitBordures() {
-    this.style.border = "none";
-    this.removeEventListener("mouseleave", retraitBordures);
-
-}
-
