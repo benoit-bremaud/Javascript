@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2-3 - Paragraphe 2.3</title>
+</head>
+<body>
+    <h1>Editions ENI - JavaScript - Exercice n°10</h1>
+    <h2>Moyenne d'une série de n nombres saisis au clavier</h2>     
+
+    <script>
+        /* Affichage du nom du script */
+        alert("Exercice n°10 - Moyenne n nombres");
+
+        /* Déclaration des variables locales */
+        let somme=0.0;
+        let cpt=1;
+
+        /* Saisie du premier nombre */
+        nombre = parseFloat(prompt("Nombre (0 pour finir) : "));
+
+        /* Boucle calcul et saisie des autres nombres*/
+        while (nombre != 0) {
+            somme += parseFloat(nombre);
+            nombre = parseFloat(prompt("Nombre (0 pour finir) : "));
+            cpt ++;
+        }
+
+        /* Affichage résultat */
+        if (cpt == 1) {
+            document.write("Aucun nombre n'a été saisi");
+        } else {
+            moyenne = somme / (cpt - 1);
+            document.write("Moyenne : " + moyenne);
+        }
+    </script>
+</body>
+</html>
