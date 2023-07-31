@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2-3 - Paragraphe 2.2</title>
+</head>
+<body>
+    <h1>Editions ENI - JavaScript - Exercice n°8</h1>
+    <h2>Moyenne de 10 nombres saisis au clavier</h2>    
+    
+    <script>
+        /* Affichage du nom du script */
+        alert("Exercice n°9 - Moyenne 10 nombres");
+
+        /* Déclaration des variables locales */
+        let nombre=0.0, moyenne=0.0, cpt=1;
+
+        /* Saisie des nombres */
+        while (cpt <= 10) {
+            nombre += parseFloat(prompt("Nombre n°" + cpt + " :"));
+            console.log(nombre + " " + cpt);
+            cpt ++;
+        }
+
+        /* Afficahe du résultat */
+        moyenne = nombre / 10;
+        document.write("Moyenne : " + moyenne);
+    </script>
+</body>
+</html>
